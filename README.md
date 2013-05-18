@@ -107,7 +107,7 @@ $(document).on('click', 'a.remove-item', function(e) {
 });
 ```
 
-### An easier way to use limp.js is inline with the html.
+### An easier way to use limp.js.
 
 ```js
   $('.open-with-limp').limp(limpOptions);
