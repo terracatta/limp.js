@@ -1,5 +1,5 @@
 # Limp.js
-## The best popup boxplugin for jQuery.
+## The best popup box plugin for jQuery.
 
 Limp.js is a popup box plugin for jQuery that is self contained (no css or images) with a focus on newer client-side usecases.
 
@@ -99,8 +99,12 @@ $(document).on('click', 'a.remove-item', function(e) {
     message: "If you remove this file it will be lost forever!"
   },
   onAction: function() {
-    // On action callbacks will find you any element that has the class `limp-action`
+    // On action callbacks will find you any element that has the class `limp-action` and bind to it.
+    // So, if the user hits enter it will fire this call back.. or if you have a button called "Remove Item"
+    // with the `limp-action` class it will also fire this callback.
+
     // This is super useful for having two buttons in your popup box: Remove item abd Cancel.
+    // Use the class `limp-close` to kill the popup box.
 
     // Delete Item Here.
   });
