@@ -240,14 +240,6 @@
         left: width
       });
 
-      // self.$limpInside.css({
-        // maxHeight: $(window).height() - (self.options.distance * 2),
-      // });
-
-      $('.snorby-cloud-box').css({
-        maxHeight: $(window).height() - (self.options.distance * 2)
-      });
-
       var resizeData = {
         height: height,
         width: width,
@@ -303,8 +295,8 @@
 
         var status = textStatus;
 
-        var html = "<div class='snorby-cloud-box'><div class='snorby-cloud-box-title'><div class='icon' />Loading Error</div><div class='snorby-cloud-box-content'><span>Error: Not Found</span></div>" +
-        "<div class='snorby-cloud-box-footer'><div class='form-actions'><button class='form-button default' onClick='$.limpClose()'>Ok</button></div></div>" +
+        var html = "<div class='limp-error-box'><div class='limp-error-box-title'><div class='icon' />Loading Error</div><div class='limp-error-box-content'><span>Error: Not Found</span></div>" +
+        "<div class='limp-error-box-footer'><div class='form-actions'><button class='form-button default' onClick='$.limpClose()'>Ok</button></div></div>" +
         "</div>";
 
         var message = $error.append(html);
