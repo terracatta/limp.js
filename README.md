@@ -14,7 +14,7 @@ Limp.js is a popup box plugin for jQuery that is self contained (no css or image
 
 ### Example Config
 
-```
+```js
 var limpOptions = {
   cache: false,
   adjustmentSize: 0,
@@ -74,7 +74,7 @@ There are two pretty simple ways to use it. Below is a more advanced way that Th
 We use handlebars to precompile templates and then use the Hnadlebars.templates call to pass the name of the templaye into. It works great and
 make the whole process super easy. First you build a function to do the setup.
 
-```
+```js
   var limpBox = function(template, data, args) {
     var self = this;
 
@@ -90,7 +90,7 @@ make the whole process super easy. First you build a function to do the setup.
 
 Then you can call it like this.
 
-```
+```js
 $(document).on('click', 'a.remove-item', function(e) {
   e.preventDefault();  
   limpBox.open('helpers/confirm-box', {
@@ -125,4 +125,4 @@ then
 ## TODO
   * Expire Cache
   * More Template Support - althought it should support pretty much anything since the onTemplate function is changeable.
-
+t 
