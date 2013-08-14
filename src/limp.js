@@ -14,6 +14,7 @@
     self.inProgress = false;
     self.template = self.options.template || null;
     self.templateData = self.options.templateData || {};
+    self.content = self.options.content || null;
 
     self.url = self.options.url || null;
     self.$limp = false;
@@ -358,6 +359,20 @@
 
         };
 
+      } else if (self.content) {
+
+         self.cache = self.content;
+
+          if (self.cache) {
+
+            callback(self.cache);
+
+          } else {
+
+            callback(self.error());
+
+          };
+
       } else {
 
         callback(self.error());
@@ -366,7 +381,7 @@
 
       return false;
     },
-
+      
     limp: function() {
      var self = this;
 
