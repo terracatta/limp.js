@@ -520,7 +520,9 @@
       };
 
     };
-    this['live']('click', toggle);
+    
+    $(document).on('click', this.selector, toggle);
+    
     return this;
   };
 
